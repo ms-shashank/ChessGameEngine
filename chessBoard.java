@@ -12,9 +12,12 @@ import java.util.LinkedList;
 public class chessBoard {
     public static LinkedList<chessPawns> ps = new LinkedList<>();
     public static chessPawns selectedchessPawns =  null;
+    //Taking a image from folder using IOException and give your path file
     public static void main(String[] args) throws IOException {
-        BufferedImage all= ImageIO.read(new File("C:\\Users\\User\\Downloads\\chesspawn images.png"));
+        BufferedImage all= ImageIO.read(new File("C:\\Users\\User\\Downloads\\chesspawn images.png"));//give your path files
         Image imgs[]=new Image[12];
+        /*based on the images, place your pices appropriatly using for condition as it is used for cutting the images 
+            into individual pices and placing on the board*/ 
         int ind=0;
         for(int y=0;y<400;y+=200){
             for(int x=0;x<1200;x+=200){
@@ -22,6 +25,7 @@ public class chessBoard {
                 ind++;
             }
         }
+        //Arrangment of the pawns on the board according to the row & column 
         chessPawns bKing = new chessPawns(3, 0, false, "king", ps);
         chessPawns bQueen = new chessPawns(4, 0, false, "queen",ps);
         chessPawns bBishop = new chessPawns(2, 0, false, "bishop", ps);
