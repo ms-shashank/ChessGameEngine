@@ -25,7 +25,7 @@ public class chessBoard {
                 ind++;
             }
         }
-        //Arrangment of the pawns on the board according to the row & column 
+        //Arrangment of the pawns on the board according to the row & column (like in a matrix)
         chessPawns bKing = new chessPawns(3, 0, false, "king", ps);
         chessPawns bQueen = new chessPawns(4, 0, false, "queen",ps);
         chessPawns bBishop = new chessPawns(2, 0, false, "bishop", ps);
@@ -62,19 +62,19 @@ public class chessBoard {
         JFrame frame = new JFrame();
         frame.setBounds(10, 10, 512, 512);
         frame.setUndecorated(true);//to remove the boarders
-        JPanel pn = new JPanel(){
+        JPanel pn = new JPanel(){   //created a new Jpanel to get the chess like a board
             @Override
-            public void paint(Graphics g) {
+            public void paint(Graphics g) {   //giving a color to the each matrix of row & coloumn 
                 boolean white = true ;
-                for(int x = 0 ; x < 8 ; x++){
-                    for(int y = 0 ; y < 8 ; y++) {
+                for(int x = 0 ; x < 8 ; x++){  //rows
+                    for(int y = 0 ; y < 8 ; y++) {   //columns
                         if (white) {
-                            g.setColor(new Color(235, 235, 208));
+                            g.setColor(new Color(235, 235, 208));  //co-ordinates
                         } else {
-                            g.setColor(new Color(119,148, 83));
+                            g.setColor(new Color(119,148, 83));   //co-ordinates
                         }
                         g.fillRect(x * 64, y * 64, 64, 64);
-                        white =! white;
+                        white =! white;   //if not black
                     }
                     white =! white;
                 }
