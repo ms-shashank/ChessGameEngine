@@ -78,10 +78,11 @@ public class chessBoard {
                     }
                     white =! white;
                 }
+                //Assiging the pices and giving there frams
                 for(chessPawns p:ps){
                     int ind = 0;
                     if(p.name.equalsIgnoreCase("king")){
-                        ind = 0;
+                        ind = 0;    
                     }
                     if(p.name.equalsIgnoreCase("queen")){
                         ind = 1;
@@ -106,20 +107,20 @@ public class chessBoard {
             }
         };
         frame.add(pn);
-        frame.addMouseListener(new MouseListener() {
+        frame.addMouseListener(new MouseListener() {          //getting mouse to be used on piceses 
             @Override
             public void mouseClicked(MouseEvent e) {
 
             }
 
             @Override
-            public void mousePressed(MouseEvent e) {
+            public void mousePressed(MouseEvent e) {           //to select the pawns after mouse is pressed or right clicked or should be holded
                 //System.out.println((getchessPawns(e.getX(), e.getY()).isWhite?"white ":"black ") +getchessPawns(e.getX(), e.getY()).name);
                 selectedchessPawns = getchessPawns(e.getX(), e.getY());
             }
 
             @Override
-            public void mouseReleased(MouseEvent e) {
+            public void mouseReleased(MouseEvent e) {           //placing the pawn after realsing the pawn in a specfic place
                 selectedchessPawns.move(e.getX() / 64, e.getY() / 64);
                 frame.repaint();
             }
