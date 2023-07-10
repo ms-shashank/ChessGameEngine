@@ -126,7 +126,7 @@ public class chessBoard {
             }
 
             @Override
-            public void mouseEntered(MouseEvent e) {
+            public void mouseEntered(MouseEvent e) {            //Mouse event reaction after entered or clicked
 
             }
 
@@ -135,7 +135,7 @@ public class chessBoard {
 
             }
         });
-        frame.addMouseMotionListener(new MouseMotionListener() {
+        frame.addMouseMotionListener(new MouseMotionListener() {       //Giving motion to the pawns whereever the pawns moves like (frames)
             @Override
             public void mouseDragged(MouseEvent e) {
                 if(selectedchessPawns != null){
@@ -155,7 +155,7 @@ public class chessBoard {
         frame.setVisible(true);
 
     }
-    public static chessPawns getchessPawns(int x, int y){
+    public static chessPawns getchessPawns(int x, int y){               //after getting the chess pawns under the mouse click 
         int xp = x / 64;
         int yp = y / 64;
         for(chessPawns p: ps){
