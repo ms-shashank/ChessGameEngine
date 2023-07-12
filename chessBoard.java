@@ -1,3 +1,4 @@
+//some are additional packages
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
