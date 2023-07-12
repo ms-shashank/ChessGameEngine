@@ -42,3 +42,4 @@ public class chessPawns {
         ps.remove(this);
     }
 }
+//next to give a movement for pawns ...............
