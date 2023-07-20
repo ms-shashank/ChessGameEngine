@@ -15,7 +15,7 @@ public class chessBoard {
     public static chessPawns selectedchessPawns =  null;
     //Taking a image from folder using IOException and give your path file
     public static void main(String[] args) throws IOException {
-        BufferedImage all= ImageIO.read(new File("C:\\Users\\User\\Downloads\\chesspawn images.png"));//give your path files
+        BufferedImage all= ImageIO.read(new File("C:\\Users\\User\\Downloads\\chesspawn images.png(The images file path is added here)"));//give your path files
         Image imgs[]=new Image[12];
         /*based on the images, place your pices appropriatly using for condition as it is used for cutting the images 
             into individual pices and placing on the board*/ 
